@@ -13,7 +13,7 @@ LIBS +=
 
 MAP_FILE=
 
-TARGET= blinker
+TARGET= hello
 
 SRC = \
 	main.c \
