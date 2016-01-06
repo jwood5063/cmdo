@@ -8,21 +8,13 @@
 // /////////////////////////////////////////////////////////////////////////////
 // Includes
 // /////////////////////////////////////////////////////////////////////////////
-#include <arcshell.h>
+#include <cmdo.h>
 #include <stdio.h>
 #include <string.h>
-#include <serial.h>
-#include <sys.h>
 #include <shell.h>
-#include "cmd.h"
 #include <version.h>
-#include <cpu.h>
-#include <ipc.h>
 #ifdef ENABLE_ENV
 #include <env.h>
-#endif
-#ifdef CMD_TEMP
-#include <temp.h>
 #endif
 #ifdef ENABLE_SYMBOL
 struct shell_symbol symbol_storage[SHELL_MAX_SYMBOLS];
