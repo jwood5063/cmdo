@@ -31,6 +31,7 @@ int main(int argc, char **argv)
 	bcm2835_i2c_begin();
 
 	bcm2835_i2c_setSlaveAddress(0x50);
+	bcm2835_i2c_set_baudrate(50000);
 	bcm2835_delayMicroseconds(100);
 
 	buffer[0]=CMD_CODE;
