@@ -30,6 +30,8 @@ int main(int argc, char **argv)
 
 	bcm2835_i2c_begin();
 
+	bcm2835_i2c_setSlaveAddress(0x50);
+
 	buffer[0]=CMD_CODE;
 	buffer[1]=CMD_ON;
 	bcm2835_i2c_write(buffer,2);
