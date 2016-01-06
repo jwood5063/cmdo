@@ -1,6 +1,6 @@
 ##############################################
-# Quantenna Communications Inc               #
-# (c) 2010 - All Rights Reserved             #
+# Jim Wood
+# (c) 2016 - All Rights Reserved             #
 ##############################################           
 PROJ = .
 ROOT = ../..
