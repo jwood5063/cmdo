@@ -24,6 +24,7 @@
 int main(int argc, char **argv)
 {
 	u8 buffer[32];
+	char hello[]="hello";
 	if (!bcm2835_init()) {
 		return -1;
 	}
@@ -44,7 +45,8 @@ int main(int argc, char **argv)
 	bcm2835_i2c_write(buffer,2);
 	bcm2835_delayMicroseconds(100);
 
-	
+	bcm2835_i2c_write(hello,strlen(hello));
+		
 	bcm2835_i2c_end();
 
 	return 0;
