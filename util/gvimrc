@@ -1,0 +1,82 @@
+if has("autocmd")
+  filetype plugin indent on
+endif
+colorscheme jellybeans
+let NERDTreeIgnore=['\.vim$', '\~$','\.u$','\.o$', '\.out$','\.ko$','tags']
+
+nmap <silent> <F2> :NERDTreeToggle<CR>
+nmap <silent> <F3> :TlistToggle<CR>
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **/*.c **/*.h" <Bar> cw<CR>
+nmap <silent> <F6> <C-T> <CR>	
+nmap <silent> <F5> :cs find g <C-R><C-W> <CR>	
+nmap <silent> <F7> :cs find s <C-R><C-W> <CR>	
+nmap <silent> <F8> :copen <CR>
+nnoremap <F10> :set mouse=a<CR>
+nnoremap <F11> :set mouse=r<CR>
+nnoremap <F12> :set hlsearch!<CR>
+" Highlight unwanted whitespace
+"   to disable, use highlight clear ExtraWhitespace
+:highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+" WS at end of line | space, tab | tab, space | space, text | multiple spaces not in string or comment
+:auto Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t\|\t\zs \+\|^\t*\zs \+\|^[^\*"]\{-}\zs  \+\ze/
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1 
+
+nmap <silent> <C-s> :so ~/.gvimrc<CR>
+imap <S-Tab> <C-o><<
+set tags=tags
+set smartindent
+set cindent
+set history=700
+set autoread
+set nofoldenable
+set incsearch
+set hlsearch
+set nocompatible
+"set efm=E.\"%f\"\,L%l/C%c:%m,%-G%.%#
+"let &errorformat = 'E\ \"%f\"\,L%l/C%c:\w%m'
+"let &errorformat .= 'E\ \"%f\"\,L%l/C%c(\#%n):\w%m'
+"let &errorformat .= '%-G%.%#'
+filetype plugin on
+syntax on
+
+" Default tab behaviour:
+set ts=8
+set shiftwidth=8
+" But tab should be 2 spaces in HTML and Smarty templates
+autocmd FileType Verilog
+  \ setlocal shiftwidth=4 |
+  \ setlocal tabstop=4 |
+  \ setlocal expandtab
+autocmd FileType vh
+  \ setlocal shiftwidth=4 |
+  \ setlocal tabstop=4
+  \ setlocal expandtab
+
+syntax on
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+:ab #b /************************************************
+:ab #e ************************************************/
+
+if has('cscope')
+  set cscopetag cscopeverbose
+
+  if has('quickfix')
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+  endif
+
+  cnoreabbrev csa cs add
+  cnoreabbrev csf cs find
+  cnoreabbrev csk cs kill
+  cnoreabbrev csr cs reset
+  cnoreabbrev css cs show
+  cnoreabbrev csh cs help
+
+"  command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
+endif
+
+
