@@ -6,7 +6,7 @@ CC=avr-gcc
 RM=rm -f
 
 # parameters
-MCU=atmega328
+MCU=atmega2560
 F_CPU=16000000UL
 BIN_FORMAT=ihex
 PORT=/dev/cuaU0
