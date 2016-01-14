@@ -1,0 +1,10 @@
+set noclobber              # do not overwrite if file existed
+set ignoreeof              # no control-d for logout
+set notify                 
+set history = 500
+
+setenv SVN_EDITOR vi
+setenv EDITOR vi
+
+source ~/.aliases
+
