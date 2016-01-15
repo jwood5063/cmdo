@@ -30,7 +30,8 @@ int main(int argc, char **argv)
 	}
 
 	bcm2835_i2c_begin();
-
+    	bcm2835_gpio_set_pud(RPI_V2_GPIO_P1_03, BCM2835_GPIO_PUD_OFF); /* SDA */
+    	bcm2835_gpio_set_pud(RPI_V2_GPIO_P1_05, BCM2835_GPIO_PUD_OFF); /* SCL */
 	bcm2835_i2c_setSlaveAddress(0x50);
 	bcm2835_i2c_set_baudrate(50000);
 	bcm2835_delayMicroseconds(100);
