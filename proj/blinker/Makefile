@@ -2,6 +2,7 @@
 # Jim Wood
 # (c) 2016 - All Rights Reserved             #
 ##############################################           
+PI = 1
 PROJ = .
 ROOT = ../..
 UTIL = $(ROOT)/util

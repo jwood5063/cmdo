@@ -2,6 +2,7 @@
 # Quantenna Communications Inc               #
 # (c) 2010 - All Rights Reserved             #
 ##############################################           
+PI = 1
 PROJ = .
 ROOT = ../..
 UTIL = $(ROOT)/util
