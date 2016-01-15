@@ -35,5 +35,5 @@ all: obj $(TARGET)
 include $(ROOT)/include/makefile.mk
 
 clean:
-	rm -rf obj $(TARGET)
+	rm -rf obj $(TARGET).*
 
