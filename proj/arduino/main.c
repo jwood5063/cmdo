@@ -11,6 +11,7 @@
 ////////////////////////////////////////////////////////////////////////////
 #define GLOBAL	// indicate globals declared in this file
 #include <cmdo.h>
+#include <avr/io.h>
 #include <i2c.h>
 
 // hello world for i2c lcd display - no driver

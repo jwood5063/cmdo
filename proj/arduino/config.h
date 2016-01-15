@@ -6,6 +6,7 @@
  */
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
+//#define __AVR_ATmega2560__
 
 #define LED_PIN RPI_GPIO_P1_11
 

@@ -2,6 +2,7 @@
 # Quantenna Communications Inc               #
 # (c) 2010 - All Rights Reserved             #
 ##############################################           
+ARDUINO = 1
 PROJ = .
 ROOT = ../..
 UTIL = $(ROOT)/util
@@ -14,7 +15,6 @@ LIBS +=
 MAP_FILE=
 
 TARGET= hello
-
 SRC = \
 	main.c \
 	$(DRIVERS)/i2c.c \
