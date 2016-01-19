@@ -23,13 +23,15 @@
  **************************************************************************/
 int main(int argc, char **argv)
 {
-	u8 buffer[32];
 	char hello[]="hello";
 
 	i2c_init();
+	uart_init(115200);
 
+	uart_puts(hello);
+	uart_putc('\n');
 
-	i2c_transmit(0x50,hello,5);
+	i2c_transmit(0x50,(u8 *)hello,5);
 
 	return 0;
 }

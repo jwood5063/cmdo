@@ -18,6 +18,7 @@ TARGET= hello
 SRC = \
 	main.c \
 	$(DRIVERS)/i2c.c \
+	$(DRIVERS)/uart.c \
 	
 ASRC += 
 
