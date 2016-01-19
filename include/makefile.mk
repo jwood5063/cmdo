@@ -55,7 +55,7 @@ obj:
 
 ifdef ARDUINO
 $(TARGET).elf: $(OBJS) $(AOBJS)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(OBJS) $(AOBJS) -o $@
 
 $(TARGET).hex: $(TARGET).elf
 	$(OBJCOPY) -O $(BIN_FORMAT) -R .eeprom $< $@

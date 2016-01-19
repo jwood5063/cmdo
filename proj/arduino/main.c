@@ -26,5 +26,10 @@ int main(int argc, char **argv)
 	u8 buffer[32];
 	char hello[]="hello";
 
+	i2c_init();
+
+
+	i2c_transmit(0x50,hello,5);
+
 	return 0;
 }
