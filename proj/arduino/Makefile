@@ -2,7 +2,7 @@
 # Quantenna Communications Inc               #
 # (c) 2010 - All Rights Reserved             #
 ##############################################           
-PI = 1
+ARDUINO = 1
 PROJ = .
 ROOT = ../..
 UTIL = $(ROOT)/util
@@ -15,10 +15,10 @@ LIBS +=
 MAP_FILE=
 
 TARGET= hello
-
 SRC = \
 	main.c \
-	$(DRIVERS)/bcm2835.c \
+	$(DRIVERS)/i2c.c \
+	$(DRIVERS)/uart.c \
 	
 ASRC += 
 
@@ -36,5 +36,5 @@ all: obj $(TARGET)
 include $(ROOT)/include/makefile.mk
 
 clean:
-	rm -rf obj $(TARGET)
+	rm -rf obj $(TARGET).*
 

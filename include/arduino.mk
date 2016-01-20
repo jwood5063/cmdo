@@ -14,7 +14,7 @@ PORT=/dev/ttyACM0
 BAUD=115200
 PROTOCOL=wiring
 PART=ATMEGA2560
-CFLAGS=-Wall -Os -DF_CPU=$(F_CPU) -mmcu=$(MCU) $(INCLUDE)
+CFLAGS=-Wall -Os -DF_CPU=$(F_CPU) -mmcu=$(MCU) $(INCLUDE) -D__AVR_ATmega2560__
 SUDO=sudo
 
 .SUFFIXES: .elf .hex
